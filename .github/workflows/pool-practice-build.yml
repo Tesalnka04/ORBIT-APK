@@ -41,6 +41,11 @@ jobs:
           include ':app'
           EOF
 
+      - name: Enable AndroidX
+        working-directory: PoolPracticeOverlay
+        run: |
+          printf 'android.useAndroidX=true\n' > gradle.properties
+
       - name: Set up Java 17
         uses: actions/setup-java@v4
         with:
