@@ -2,6 +2,9 @@ name: Build PoolAimOverlay APK
 
 on:
   workflow_dispatch:
+  push:
+    paths:
+      - 'PoolAimOverlay_Final.zip'
 
 permissions:
   contents: read
